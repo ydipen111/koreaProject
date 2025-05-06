@@ -1,6 +1,7 @@
 
 import express from 'express';
 import mongoose from 'mongoose';
+import auth from './Routes/authRoutes.js';
 
 const app = express();
 
@@ -18,16 +19,4 @@ mongoose.connect('mongodb+srv://DipenDra:Dipendra123@cluster0.h9oaq.mongodb.net/
   console.log("Error connection to mangoDb", err);
 })
 
-app.get('/', (req, res) => {
-  res.send('Hello World!');
-})
-
-app.get('/login', (req, res) => {
-  try {
-    return res.status(200).json({ message: "server created successfully" });
-  } catch (error) {
-    return res.status(201).json({ message: `error occures ${error}` });
-
-  }
-
-})
+app.use('/api', auth);

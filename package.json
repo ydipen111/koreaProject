@@ -15,7 +15,12 @@
     "nodemon": "^3.1.10"
   },
   "dependencies": {
+    "bcrypt": "^5.1.1",
     "express": "^5.1.0",
+    "express-joi-validation": "^6.0.0",
+    "express-router": "^0.0.1",
+    "joi": "^17.13.3",
+    "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.14.1"
   }
 }
